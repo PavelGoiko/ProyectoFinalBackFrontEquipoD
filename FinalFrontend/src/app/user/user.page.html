@@ -1,0 +1,58 @@
+<ion-header>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="main.js"></script>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>
+			Users
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-item color="danger">
+			<ion-col>
+				Username
+			</ion-col>
+			<ion-col>
+				Email
+			</ion-col>
+			<ion-item color="danger">
+				AC &#160;&#160;BO
+			</ion-item>
+
+		</ion-item>
+
+		<!--<ion-item color="success">
+      <ion-icon slot="start"></ion-icon>
+      Username
+    </ion-item>-->
+	</ion-list>
+
+	<ion-list>
+		<ion-item color="primary" *ngFor="let item of items">
+			<ion-col>
+				{{item.username}}
+			</ion-col>
+
+			<ion-col>
+				{{item.email}}
+			</ion-col>
+
+			<ion-toggle checked color="success" slot="end"></ion-toggle>
+			<ion-toggle checked color="success" slot="end"></ion-toggle>
+
+			<div class="item-note" slot="">
+				{{item.note}}
+			</div>
+		</ion-item>
+	</ion-list>
+	<!--
+    <div *ngIf="selectedItem" padding>
+      You navigated here from <b>{{selectedItem.title }}</b>
+    </div>
+  -->
+</ion-content>

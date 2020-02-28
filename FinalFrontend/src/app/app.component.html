@@ -1,0 +1,99 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-header >
+        <ion-toolbar>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          
+          <ion-menu-toggle auto-hide="false" >
+            <div *ngIf="userService.user == undefined">
+              <ion-item  [routerDirection]="'root'" [routerLink]="['/login']">
+                <ion-icon slot="start" name="contact"></ion-icon>
+                <ion-label>
+                  Login
+                </ion-label>
+              </ion-item>
+            </div>
+          </ion-menu-toggle>
+          
+
+          <ion-menu-toggle auto-hide="false" >
+            <div *ngIf="userService.user == undefined">
+              <ion-item  [routerDirection]="'root'" [routerLink]="['/register']">
+                <ion-icon slot="start" name="archive"></ion-icon>
+                <ion-label>
+                  Register
+                </ion-label>
+              </ion-item>
+            </div>
+          </ion-menu-toggle>
+
+          <!--<ion-menu-toggle auto-hide="false" >
+            <div *ngIf="userService.user == undefined">
+              <ion-item  [routerDirection]="'root'" [routerLink]="['/public-publications']">
+                <ion-icon slot="start" name="body"></ion-icon>
+                <ion-label>
+                  Public
+                </ion-label>
+              </ion-item>
+            </div>
+          </ion-menu-toggle>-->
+          
+          <ion-menu-toggle auto-hide="false" >
+            <div *ngIf="userService.user == undefined">
+              <ion-item  [routerDirection]="'root'" [routerLink]="['/publications']">
+                <ion-icon slot="start" name="journal"></ion-icon>
+                <ion-label>
+                  Publications
+                </ion-label>
+              </ion-item>
+            </div>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle auto-hide="false" >
+            <div *ngIf="userService.user == undefined">
+              <ion-item  [routerDirection]="'root'" [routerLink]="['/sales']">
+                <ion-icon slot="start" name="journal"></ion-icon>
+                <ion-label>
+                  sales
+                </ion-label>
+              </ion-item>
+            </div>
+          </ion-menu-toggle>
+
+          <!--<ion-menu-toggle auto-hide="false" >
+            <div *ngIf="userService.user == undefined" >
+              <ion-item  [routerDirection]="'root'" [routerLink]="['/user']">
+                <ion-icon slot="start" name="beer"></ion-icon>
+                <ion-label>
+                  Users
+                </ion-label>
+              </ion-item>
+            </div>
+          </ion-menu-toggle>-->
+          <ion-menu-toggle auto-hide="false" >
+            <div *ngIf="userService.user == undefined">
+              <ion-item  [routerDirection]="'root'" [routerLink]="['/logout']">
+                <ion-icon slot="start" name="contact"></ion-icon>
+                <ion-label>
+                  Logout
+                </ion-label>
+              </ion-item>
+            </div>
+          </ion-menu-toggle>
+
+           
+           
+          
+    
+    
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
